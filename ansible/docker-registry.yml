@@ -1,4 +1,4 @@
-- hosts: https://index.docker.io/v1/
+- hosts: localhost
   become: true
   roles:
     - docker-registry
