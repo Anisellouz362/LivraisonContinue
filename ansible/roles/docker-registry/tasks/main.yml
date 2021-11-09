@@ -6,5 +6,5 @@
   docker_image:
     name: devops
     repository: anisellouz/livraison
-    tag: anisellouz/devops
+    tag: devops:1
     push: yes
