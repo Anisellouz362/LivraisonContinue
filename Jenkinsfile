@@ -6,7 +6,7 @@ pipeline {
                 script{
                     checkout([$class: 'GitSCM', branches: [[name: '*/master']],
                         userRemoteConfigs: [[
-                            credentialsId: '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',
+                            credentialsId: 'anis',
                             url: 'https://github.com/Anisellouz362/LivraisonContinue.git']]])
                 }
             }
