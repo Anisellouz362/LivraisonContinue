@@ -1,4 +1,4 @@
 - hosts: localhost
   become: true
   roles:
-    - container-registry
+    - docker-registry
