@@ -5,7 +5,7 @@
   docker_image:
     name: devops
     build:
-     path: /var/lib/jenkins/workspace/pipline_CI
+     path: /var/lib/jenkins/workspace/Liv/
      pull: no
     source: build
     state: present
