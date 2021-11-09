@@ -1,6 +1,5 @@
 ---
 # tasks file for docker-registry
----
 # tasks file for docker
 # tasks file for docker
 - name: Tag and push to docker hub
