@@ -2,8 +2,13 @@
 # tasks file for docker-registry
 # tasks file for docker
 # tasks file for docker
-- name: Tag and push to docker hub
+- name: pull an image
   docker_image:
     name: anisellouz/devops
-    repository: anisellouz/livraison
+    source: pull
+- name: Tag and push to docker hub
+  docker_image:
+    name: anisellouz/devops:1
+    repository: anisellouz/livraison:1
     push: yes
+    source: local
