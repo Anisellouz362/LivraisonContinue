@@ -1,7 +1,7 @@
 localhost ansible_connection=local
 
 [server]
-localhost
+localhost ansible_become_pass=anis
 
 [Server:vars]
 ansible_python_interpreter= /usr/bin/python3
