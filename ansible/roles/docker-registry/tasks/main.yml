@@ -5,6 +5,6 @@
 - name: Tag and push to docker hub
   docker_image:
     name: devops
-    repository: anisellouz/livraison
-    tag: latest
+    repository: anisellouz/devops
+    tag: devops anisellouz/devops
     push: yes
