@@ -9,6 +9,6 @@
 - name: Tag and push to docker hub
   docker_image:
     name: anisellouz/devops:latest
-    repository: anisellouz/livraison:latest
+    repository: anisellouz/devops
     push: yes
     source: local
