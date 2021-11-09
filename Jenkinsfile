@@ -36,8 +36,9 @@ pipeline {
     stage('Deploy Image') {
       steps{
          script {
-            docker.withRegistry( 'anisellouz', registryCredential ) {
-            dockerImage.push()
+          docker.withRegistry('https://registry.hub.docker.com', 'anisellouz') {
+            app.push("${env.BUILD_NUMBER}")
+            app.push("latest")
           }
         }
       }
