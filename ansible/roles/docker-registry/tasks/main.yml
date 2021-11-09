@@ -4,7 +4,7 @@
 # tasks file for docker
 - name: Tag and push to docker hub
   docker_image:
-    name: devops
+    name: devops:latest
     repository: anisellouz/livraison
     tag: latest
     push: yes
