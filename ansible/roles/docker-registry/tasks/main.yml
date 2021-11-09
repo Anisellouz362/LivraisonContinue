@@ -8,7 +8,7 @@
     source: pull
 - name: Tag and push to docker hub
   docker_image:
-    name: anisellouz/devops:1
-    repository: anisellouz/livraison:1
+    name: anisellouz/devops:latest
+    repository: anisellouz/livraison:latest
     push: yes
     source: local
