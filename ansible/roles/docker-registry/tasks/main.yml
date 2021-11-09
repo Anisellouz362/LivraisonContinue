@@ -3,14 +3,9 @@
 ---
 # tasks file for docker
 # tasks file for docker
-- name: Log into DockerHub
-  docker_login:
-    username: anisell
-    password: fadhel76220819
-    email: anis.ellouz1@esprit.tn
 - name: Tag and push to docker hub
   docker_image:
-    name: anisell/devops
+    name: anisellouz/devops
     repository: livraison/devops
     tag: latest
     push: yes
