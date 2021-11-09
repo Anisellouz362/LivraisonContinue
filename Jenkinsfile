@@ -37,8 +37,7 @@ pipeline {
       steps{
          script {
           docker.withRegistry('https://registry.hub.docker.com', 'anisellouz') {
-            app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
+                    sh "ansible-playbook ansible/docker-registry.yml -i ansible/inventory/host.yml "
           }
         }
       }
