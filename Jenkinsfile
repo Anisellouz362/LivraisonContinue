@@ -1,15 +1,29 @@
-node {
-    def app
+pipeline {
+  agent any
+    stages {
+        stage('Pull') {
+             steps{
+                script{
+                    checkout([$class: 'GitSCM', branches: [[name: '*/master']],
+                        userRemoteConfigs: [[
+                            credentialsId: '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',
+                            url: 'https://github.com/Anisellouz362/LivraisonContinue.git']]])
+                }
+            }
+        }
+ 
+      
 
-    stage('Clone repository') {
-        /* Cloning the Repository to our Workspace */
-
-        checkout scm
-    }
+         stage('install') {
+             steps{
+                script{
+                    sh " npm install --save-dev @angular-devkit/build-angular"
+                }
+            }
+        }
          stage('Build') {
              steps{
                 script{
-                    sh " ansible-playbook Ansible/build.yml -i ansible/inventory/host.yml"
+                    sh " ansible-playbook Ansible/build.yml -i Ansible/inventory/host.yml"
                 }
-            }
-         }}
+            }}}}
