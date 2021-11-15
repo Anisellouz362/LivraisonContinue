@@ -14,8 +14,8 @@
 #    source: local
     
 - name: Tag and push to docker hub
-  community.docker.docker_image:
-     name: devops:latest
-     repository: anisellouz/devops:1.2
-     push: yes
-     source: local
+  docker_image:
+    name: devops:latest
+    repository: anisellouz/livraison
+    tag: end
+    push: yes
