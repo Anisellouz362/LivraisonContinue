@@ -2,7 +2,7 @@
 # tasks file for docker-registry
 - name: Log into DockerHub
   docker_login:
-    username: anisell
+    username: anisellouz
     password: fadhel76220819
     
 #- name: Tag and push to docker hub
@@ -16,6 +16,6 @@
 - name: Tag and push to docker hub
   docker_image:
     name: devops:latest
-    repository: anisell/livraison
+    repository: anisellouz/livraison
     tag: end
     push: yes
