@@ -1,14 +1,21 @@
 ---
 # tasks file for docker-registry
-# tasks file for docker
-# tasks file for docker
-- name: pull an image
-  docker_image:
-    name: anisellouz/devops
-    source: pull
+- name: Log into DockerHub
+  docker_login:
+    username: anisellouz
+    password: fadhel76220819
+    
+#- name: Tag and push to docker hub
+#  docker_image:
+#    name: devops
+#    repository: anisellouz/livraison
+#    tag: 7.0
+#    push: yes
+#    source: local
+    
 - name: Tag and push to docker hub
-  docker_image:
-    name: anisellouz/devops:latest
-    repository: anisellouz/devops
-    push: yes
-    source: local
+  community.docker.docker_image:
+     name: devops:latest
+     repository: anisellouz/devops:1.2
+     push: yes
+     source: local
