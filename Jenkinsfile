@@ -34,14 +34,13 @@ pipeline {
                 }
             }
         }
-    stage('Deploy Image') {
-      steps{
-         script {
-          docker.withRegistry('https://registry.hub.docker.com', 'anisellouz') {
+        stage('push docker hub') {
+             steps{
+                script{
                     sh "ansible-playbook ansible/docker-registry.yml -i ansible/inventory/host.yml "
-                    sh "docker push anisellouz/devops"
-          }
+                }
+            }
         }
-      }
+        
     }
 			}}
