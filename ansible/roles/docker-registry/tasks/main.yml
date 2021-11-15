@@ -3,7 +3,7 @@
 - name: Log into DockerHub
   docker_login:
     username: anisellouz
-    password: fadhel76220819
+    password: anisellouz
     
 #- name: Tag and push to docker hub
 #  docker_image:
