@@ -1,4 +1,6 @@
-- hosts: localhost
-  become: true
-  roles:
-    - docker-registry
+---
+   - hosts: localhost
+     gather_facts: yes
+     become: true
+     roles:
+            - { role: register }
