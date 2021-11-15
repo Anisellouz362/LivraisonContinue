@@ -1,12 +1,13 @@
+
 pipeline {
   agent any
     stages {
         stage('Pull') {
              steps{
                 script{
-                    checkout([$class: 'GitSCM', branches: [[name: '*/master']],
+                    checkout([$class: 'GitSCM', branches: [[name: '*/main']],
                         userRemoteConfigs: [[
-                            credentialsId: 'anis',
+                            credentialsId: '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',
                             url: 'https://github.com/Anisellouz362/LivraisonContinue.git']]])
                 }
             }
