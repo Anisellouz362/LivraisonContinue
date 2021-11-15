@@ -16,7 +16,7 @@ pipeline {
          stage('install') {
              steps{
                 script{
-                    sh " npm install --save-dev @angular-devkit/build-angular"
+                    sh " npm install --save-dev @angular-devkit/build-angular --force"
                 }
             }
         }
