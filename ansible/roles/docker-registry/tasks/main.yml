@@ -9,6 +9,6 @@
 - name: Tag and push to docker hub
   docker_image:
     name: devops:latest
-    repository: anisell/livraisonc
+    repository: anisell/liv
     tag: end
     push: yes
